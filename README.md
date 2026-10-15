@@ -66,6 +66,20 @@ Variáveis de ambiente (no `docker-compose.yml`):
 | PROCESSING_DELAY_MS | consumidores | 1000 | Atraso por mensagem, para as filas crescerem |
 | PREFETCH | consumidores | 1 | Mensagens não confirmadas por consumidor |
 
+# Evidências de execução
+
+<img width="1893" height="983" alt="Captura de tela 2026-10-15 195920" src="https://github.com/user-attachments/assets/d6c6fb4c-cc53-49fa-b5d7-f72bdd678fae" />
+<img width="1908" height="463" alt="Captura de tela 2026-10-15 195800" src="https://github.com/user-attachments/assets/c0932436-cfe7-4ac4-bd41-ec899e1abca0" />
+<img width="1907" height="520" alt="Captura de tela 2026-10-15 195508" src="https://github.com/user-attachments/assets/0ce6048a-d33f-4cd5-be3d-86db040a072c" />
+<img width="1916" height="828" alt="Captura de tela 2026-10-15 195432" src="https://github.com/user-attachments/assets/35d6237d-8d12-47bb-b5f5-09f31634f096" />
+<img width="1121" height="124" alt="Captura de tela 2026-10-15 195124" src="https://github.com/user-attachments/assets/3791fa53-b6b1-4022-8b23-e0ef90a6310d" />
+<img width="1357" height="307" alt="Captura de tela 2026-10-15 195103" src="https://github.com/user-attachments/assets/d767f78b-342b-4055-bf0e-9f34d451971a" />
+<img width="1351" height="743" alt="Captura de tela 2026-10-15 194922" src="https://github.com/user-attachments/assets/24a86fb8-9c77-42d7-a146-cc2c3efa135a" />
+<img width="1355" height="742" alt="Captura de tela 2026-10-15 194901" src="https://github.com/user-attachments/assets/3fd1cac7-6b1a-4613-b1eb-43b026f8ebfe" />
+<img width="1358" height="317" alt="Captura de tela 2026-10-15 194826" src="https://github.com/user-attachments/assets/b878e226-daec-4110-8a46-81ea26c3525d" />
+
+
+
 ## Demonstração e evidências
 
 Capturas da interface do RabbitMQ em `docs/evidencias/`.
