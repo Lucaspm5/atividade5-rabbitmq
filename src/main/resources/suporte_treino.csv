@@ -1,0 +1,42 @@
+acesso;Não consigo fazer login na minha conta
+acesso;Esqueci a senha e o link de redefinição não chega
+acesso;Acesso negado ao painel administrativo
+acesso;Minha conta foi bloqueada após várias tentativas de entrar
+acesso;Erro de autenticação ao informar usuário e senha
+acesso;Usuário ou senha inválidos mesmo digitando corretamente
+acesso;Permissão negada ao abrir a área restrita
+acesso;O token de acesso expirou e não consigo entrar
+acesso;Não recebo o código de verificação para entrar na conta
+acesso;Meu perfil perdeu as permissões de acesso ao módulo
+acesso;Login falha com mensagem de credenciais inválidas
+acesso;Autenticação em dois fatores não aceita meu código
+acesso;Sessão expira e preciso fazer login toda hora
+acesso;Cadastro bloqueado, não tenho permissão para acessar
+desempenho;O sistema está muito lento ao carregar as telas
+desempenho;A página demora minutos para abrir
+desempenho;Aplicativo trava e congela com frequência
+desempenho;Alto consumo de CPU e memória durante o uso
+desempenho;Tempo de resposta elevado ao gerar relatórios
+desempenho;Lentidão extrema nas consultas e buscas
+desempenho;O programa fica travado e demora para responder
+desempenho;Sistema lento no horário de pico, gargalo nas requisições
+desempenho;Upload de arquivos demora muito e a tela congela
+desempenho;Uso excessivo de memória deixa tudo lento
+desempenho;Dashboard demora a carregar e engasga ao filtrar
+desempenho;A aplicação está pesada e trava ao exportar dados
+desempenho;Latência alta e lentidão generalizada no sistema
+desempenho;Processamento muito demorado e consumo de CPU no limite
+conexao;Erro de conexão com o servidor
+conexao;Timeout ao tentar conectar ao banco de dados
+conexao;Sem conexão com a internet dentro do aplicativo
+conexao;A VPN desconecta toda hora e perco a conexão
+conexao;Falha de rede ao sincronizar os dados
+conexao;Conexão recusada pelo servidor remoto
+conexao;Perda de pacotes e instabilidade na rede
+conexao;O Wi-Fi cai e o aplicativo desconecta
+conexao;Não consigo conectar ao servidor, aparece erro de rede
+conexao;Conexão instável, cai a todo momento
+conexao;Falha ao conectar com a API, tempo esgotado
+conexao;Servidor fora do ar, sem resposta de rede
+conexao;Erro de DNS e a conexão com o host falha
+conexao;O aplicativo perde a conexão com a internet sozinho

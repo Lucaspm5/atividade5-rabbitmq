@@ -1,0 +1,77 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "5673:5672"     # AMQP
+      - "15672:15672"   # Interface de administração
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin123
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 20s
+    networks:
+      - sd-net
+
+  gerador:
+    build:
+      context: .
+      args:
+        MAIN_CLASS: sd.gerador.GeradorApp
+    container_name: gerador
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASS: admin123
+      MESSAGES_PER_SECOND: "10"   # mínimo exigido: 5
+      ERROR_RATE: "0.05"          # 5% das mensagens saem corrompidas (vão para a DLQ)
+    networks:
+      - sd-net
+
+  consumidor-sentimento:
+    build:
+      context: .
+      args:
+        MAIN_CLASS: sd.consumidor.ConsumidorSentimentoApp
+    container_name: consumidor-sentimento
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASS: admin123
+      PROCESSING_DELAY_MS: "1000"  # ~1 msg/s, bem abaixo da taxa de chegada
+      PREFETCH: "1"
+    networks:
+      - sd-net
+
+  consumidor-suporte:
+    build:
+      context: .
+      args:
+        MAIN_CLASS: sd.consumidor.ConsumidorSuporteApp
+    container_name: consumidor-suporte
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASS: admin123
+      PROCESSING_DELAY_MS: "1000"
+      PREFETCH: "1"
+    networks:
+      - sd-net
+
+networks:
+  sd-net:
+    driver: bridge
